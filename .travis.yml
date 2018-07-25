@@ -4,5 +4,8 @@ node_js:
     - "8"
     - "7"
     - "6"
-before_deploy:
+after_success:
   - ./node_modules/.bin/npm version patch
+  - git add -u
+  - git commit -m "[ci skip] version changed"
+  - git push
