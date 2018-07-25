@@ -4,3 +4,5 @@ node_js:
     - "8"
     - "7"
     - "6"
+before_deploy:
+  - ./node_modules/.bin/npm version patch
