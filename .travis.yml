@@ -5,6 +5,7 @@ node_js:
     - "7"
     - "6"
 after_success:
+	- echo $GIT_PW
   - npm version patch
   - git add -u
   - git commit -m "[ci skip] version changed"
