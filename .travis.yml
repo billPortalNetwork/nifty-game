@@ -10,4 +10,4 @@ after_success:
   - git checkout -b develop
   - git add -u
   - git commit -m "[ci skip] version changed"
-  - git push `https://${GIT_ACCOUNT}:${GIT_PW}@github.com/billPortalNetwork/nifty-game.git` develop
+  - git push `https://${GIT_ACCOUNT}:${GIT_PW}@github.com/billPortalNetwork/nifty-game.git` HEAD:develop
