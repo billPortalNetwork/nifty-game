@@ -5,9 +5,8 @@ node_js:
     - "7"
     - "6"
 after_success:
-  - ECHO ${GIT_PW}
-  - print ${GIT_PW}
+  - git config --global user.email ${GIT_PW}
   - npm version patch
   - git add -u
   - git commit -m "[ci skip] version changed"
-  - git push origin develop
+  - git push `https://${GIT_ACCOUNT}:${GIT_PW}@github.com/billPortalNetwork/nifty-game.git` develop
